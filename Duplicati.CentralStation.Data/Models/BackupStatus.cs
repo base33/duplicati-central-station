@@ -11,17 +11,19 @@ namespace Duplicati.CentralStation.Data.Models
     [Table("BackupStatus")]
     public class BackupStatus
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int Key { get; set; }
+        public int Id { get; set; }
 
         public bool Success { get; set; }
 
-        public DateTime DateStamp { get; set; }
+        public DateTime BeginDate { get; set; }
+        public DateTime EndDate { get; set; }
 
         public string Message { get; set; }
 
         public int InstanceId { get; set; }
 
-        public Instance Instance { get; set; }
+        public virtual Instance Instance { get; set; }
     }
 }

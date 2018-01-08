@@ -11,3 +11,23 @@ c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralS
 c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Api\obj\Debug\Duplicati.CentralStation.Api.csprojResolveAssemblyReference.cache
 c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Api\obj\Debug\Duplicati.CentralStation.Api.dll
 c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Api\obj\Debug\Duplicati.CentralStation.Api.pdb
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\Duplicati.CentralStation.Api.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\Duplicati.CentralStation.Api.pdb
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\System.Web.Http.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\System.Web.Http.WebHost.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\System.Net.Http.Formatting.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\System.Web.Http.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\System.Web.Http.WebHost.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\obj\Debug\Duplicati.CentralStation.Api.csprojResolveAssemblyReference.cache
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\obj\Debug\Duplicati.CentralStation.Api.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\obj\Debug\Duplicati.CentralStation.Api.pdb
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\Duplicati.CentralStation.Api.dll.config
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\Duplicati.CentralStation.Data.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\EntityFramework.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\Duplicati.CentralStation.Data.pdb
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\EntityFramework.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Debug\EntityFramework.SqlServer.xml

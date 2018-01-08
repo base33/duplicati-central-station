@@ -11,6 +11,7 @@ namespace Duplicati.CentralStation.Data.Models
     [Table("Instance")]
     public class Instance
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
 

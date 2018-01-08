@@ -8,3 +8,13 @@ c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralS
 c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.xml
 c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.SqlServer.xml
 c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.csprojResolveAssemblyReference.cache
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\Duplicati.CentralStation.Data.dll.config
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\Duplicati.CentralStation.Data.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\Duplicati.CentralStation.Data.pdb
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.csprojResolveAssemblyReference.cache
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.pdb

@@ -1,0 +1,13 @@
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Release\Duplicati.CentralStation.Api.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Release\Duplicati.CentralStation.Api.pdb
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Release\Newtonsoft.Json.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Release\System.Net.Http.Formatting.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Release\System.Web.Http.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Release\System.Web.Http.WebHost.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Release\Newtonsoft.Json.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Release\System.Net.Http.Formatting.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Release\System.Web.Http.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\bin\Release\System.Web.Http.WebHost.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\obj\Release\Duplicati.CentralStation.Api.csprojResolveAssemblyReference.cache
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\obj\Release\Duplicati.CentralStation.Api.dll
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Api\obj\Release\Duplicati.CentralStation.Api.pdb
