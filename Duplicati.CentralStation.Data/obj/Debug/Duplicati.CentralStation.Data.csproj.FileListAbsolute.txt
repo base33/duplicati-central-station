@@ -1,0 +1,10 @@
+c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\bin\Debug\Duplicati.CentralStation.Data.dll
+c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\bin\Debug\Duplicati.CentralStation.Data.pdb
+c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.dll
+c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.pdb
+c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\bin\Debug\Duplicati.CentralStation.Data.dll.config
+c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.dll
+c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.xml
+c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\craig\onedrive\documents\visual studio 2015\Projects\Duplicati.CentralStation\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.csprojResolveAssemblyReference.cache
