@@ -24,7 +24,14 @@ namespace Duplicati.CentralStation.Data.Models
         public int SizeOfExaminedFiles { get; set; }
         public int NotProcessedFiles { get; set; }
         public int DeletedFiles { get; set; }
-        public TimeSpan Duration { get; set; }
+        public long DurationTicks { get; set; }
+
+        [NotMapped]
+        public TimeSpan Duration
+        {
+            get { return new TimeSpan(DurationTicks); }
+            set { DurationTicks = value.Ticks; }
+        }
 
         public int InstanceId { get; set; }
 

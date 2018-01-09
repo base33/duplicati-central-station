@@ -15,10 +15,17 @@
                         <td>{{instance.Name}}</td>
                         <td>{{instance.Url}}</td>
                         <td>{{instance.NotificationUrl}}</td>
-                        <td><button type="button" class="btn btn-danger" ng-click="delete(instance)">Delete</button></td>
+                        <td>
+                            <a type="button" class="btn btn-success" href="#!/instances/detailed/{{instance.Id}}">View Backups</a>
+                            <button type="button" class="btn btn-danger" ng-click="delete(instance)">Delete</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+<!--
+future reference: https://stackoverflow.com/questions/29602222/create-a-simple-bootstrap-yes-no-confirmation-or-just-notification-alert-in-angu
+-->

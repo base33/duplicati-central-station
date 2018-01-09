@@ -12,6 +12,7 @@ namespace Duplicati.CentralStation.Api.Models
         public int InstanceId { get; set; }
         public string InstanceName { get; set; }
         public bool ShouldBeFlagged { get; set; }
+        public string FlagReason { get; set; }
         public BackupReport Report { get; set; }
         public BackupReport LastSuccessfulReport { get; set; }
     }

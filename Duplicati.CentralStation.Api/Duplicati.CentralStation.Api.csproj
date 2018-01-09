@@ -70,6 +70,7 @@
     <Compile Include="Controllers\InstancesController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Models\Backup.cs" />
+    <Compile Include="Models\BackupDetailed.cs" />
     <Compile Include="Models\DuplicatiReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

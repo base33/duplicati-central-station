@@ -128,6 +128,11 @@
                 templateUrl: '/views/instance_list.html',
                 controller: 'InstanceListController',
                 section: "instancelist"
+            })
+            .when('/instances/detailed/:id', {
+                templateUrl: '/views/instance_detailed.html',
+                controller: 'InstanceDetailedController',
+                section: "instancedetailed"
             });
 
 
@@ -146,7 +151,17 @@
             $http.get("/api/backups/latest").then((response) => {
                 $scope.backups = response.data;
 
-                $scope.totalBackups
+                $scope.totalFlagged = 0;
+                $scope.totalSuccess = 0;
+
+                for (var i = 0; i < $scope.backups.length; i++) {
+                    if ($scope.backups[i].ShouldBeFlagged) {
+                        $scope.totalFlagged++;
+                    }
+                    else {
+                        $scope.totalSuccess++;
+                    }
+                }
             });
         });
 
@@ -189,6 +204,19 @@
 
             load();
         });
+
+        centralstation.controller('InstanceDetailedController', function ($scope, $routeParams, $http, $location) {
+            $scope.name = 'InstanceDetailedController';
+            $scope.params = $routeParams;
+
+            function load() {
+                $http.get("/api/backups/" + $routeParams.id).then(function (response) {
+                    $scope.instance = response.data;
+                });
+            }
+
+            load();
+        });
     </script>
 
 <style>
@@ -207,6 +235,10 @@
 
     .color-white {
         color: white;
+    }
+
+    .card-body-icon.text-gray {
+        color:#e3e0e0;
     }
 </style>
 </body>

@@ -11,7 +11,7 @@
     [ExaminedFiles] INT NOT NULL, 
     [SizeOfExaminedFiles] INT NOT NULL, 
     [NotProcessedFiles] INT NOT NULL, 
-    [Duration] TIME NOT NULL, 
+    [DurationTicks] BIGINT NOT NULL, 
     [DeletedFiles] INT NOT NULL, 
     CONSTRAINT [FK_BackupReport_ToInstance] FOREIGN KEY ([InstanceId]) REFERENCES [Instance]([Id])
 )

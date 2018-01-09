@@ -127,6 +127,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
+    <Content Include="Views\Instance_Detailed.html" />
     <Content Include="Views\dashboard.html" />
     <Content Include="Views\Instance_List.html" />
     <Content Include="Views\Instance_Add.html" />
