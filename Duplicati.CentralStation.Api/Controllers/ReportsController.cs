@@ -30,13 +30,20 @@ namespace Duplicati.CentralStation.Api.Controllers
             //save to disk
             using (DuplicatiContext db = new DuplicatiContext())
             {
-                db.BackupStatuses.Add(new Data.Models.BackupStatus
+                db.BackupReports.Add(new Data.Models.BackupReport
                 {
+                    InstanceId = id,
                     BeginDate = report.BeginTime,
                     EndDate = report.EndTime,
                     Message = "",
-                    InstanceId = id,
-                    Success = report.Success
+                    Success = report.Success,
+                    AddedFiles = report.AddedFiles,
+                    SizeOfAddedFiles = report.SizeOfAddedFiles,
+                    ExaminedFiles = report.ExaminedFiles,
+                    SizeOfExaminedFiles = report.SizeOfExaminedFiles,
+                    DeletedFiles = report.DeletedFiles,
+                    NotProcessedFiles = report.NotProcessedFiles,
+                    Duration = report.Duration
                 });
                 await db.SaveChangesAsync();
             }

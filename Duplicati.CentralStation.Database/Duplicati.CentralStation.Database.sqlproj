@@ -61,9 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Instance.sql" />
-    <Build Include="dbo\BackupStatus.sql" />
+    <Build Include="dbo\BackupReport.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Duplicati.CentralStation.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Duplicati.CentralStation.Database.local.publish.xml" />
   </ItemGroup>
 </Project>

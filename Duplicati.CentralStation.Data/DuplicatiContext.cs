@@ -16,6 +16,6 @@ namespace Duplicati.CentralStation.Data
         }
 
         public IDbSet<Instance> Instances { get; set; } 
-        public IDbSet<BackupStatus> BackupStatuses { get; set; }  
+        public IDbSet<BackupReport> BackupReports { get; set; }  
     }
 }

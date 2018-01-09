@@ -18,3 +18,13 @@ D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\En
 D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.csprojResolveAssemblyReference.cache
 D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.dll
 D:\Projects\duplicati-central-station\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.pdb
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\Duplicati.CentralStation.Data.dll.config
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\Duplicati.CentralStation.Data.dll
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\Duplicati.CentralStation.Data.pdb
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.dll
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.xml
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.csprojResolveAssemblyReference.cache
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.dll
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Data\obj\Debug\Duplicati.CentralStation.Data.pdb

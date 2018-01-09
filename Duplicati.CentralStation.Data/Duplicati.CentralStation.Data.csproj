@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DuplicatiContext.cs" />
-    <Compile Include="Models\BackupStatus.cs" />
+    <Compile Include="Models\BackupReport.cs" />
     <Compile Include="Models\Instance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

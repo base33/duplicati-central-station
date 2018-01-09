@@ -1,0 +1,24 @@
+﻿<div class="row">
+    <div class="col-xl-12 col-sm-12 mb-12">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Url</th>
+                        <th>Report Url</th>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="instance in instances">
+                        <td>{{instance.Name}}</td>
+                        <td>{{instance.Url}}</td>
+                        <td>{{instance.NotificationUrl}}</td>
+                        <td><button type="button" class="btn btn-danger" ng-click="delete(instance)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

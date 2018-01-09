@@ -1,0 +1,12 @@
+﻿<form ng-submit="submit()" name="form">
+    <div class="form-group" ng-class="{ 'has-danger': form.$submitted && form.name.$error.required}">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" ng-class="{ 'form-control-danger': form.$submitted && form.name.$error.required}" aria-describedby="name" placeholder="Please enter the instance name" ng-model="instance.Name" required>
+    </div>
+    <div class="form-group">
+        <label for="description">Url</label>
+        <input type="text" class="form-control" id="url" name="url" ng-class="{ 'form-control-danger': form.$submitted && form.name.$error.required}" aria-describedby="url" placeholder="Please enter the instance Duplicati Url" ng-model="instance.Url" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary" ng-click="form.$submitted = true;">Create Instance</button>
+</form>

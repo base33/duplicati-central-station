@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Newtonsoft.Json;
 
 namespace Duplicati.CentralStation.App
 {
@@ -10,6 +11,7 @@ namespace Duplicati.CentralStation.App
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
 
             // Web API routes
             config.MapHttpAttributeRoutes();

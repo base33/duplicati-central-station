@@ -1,0 +1,73 @@
+﻿<!-- Icon Cards-->
+<div class="row">
+    <div class="col-xl-3 col-sm-6 mb-3"></div>
+    <div class="col-xl-3 col-sm-6 mb-3"></div>
+    <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="card text-white bg-success o-hidden h-100">
+            <div class="card-body">
+                <div class="card-body-icon">
+                    <i class="fa fa-fw fa-check"></i>
+                </div>
+                <div class="mr-5">26/30 Okay!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+                <span class="float-left">View Details</span>
+                <span class="float-right">
+                    <i class="fa fa-angle-right"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="card text-white bg-danger o-hidden h-100">
+            <div class="card-body">
+                <div class="card-body-icon">
+                    <i class="fa fa-fw fa-exclamation-triangle"></i>
+                </div>
+                <div class="mr-5">4/30 Requires Attention!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+                <span class="float-left">View Details</span>
+                <span class="float-right">
+                    <i class="fa fa-angle-right"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-database"></i> Latest Backups
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Latest Backup Notification</th>
+                        <th>Last Successful Backup</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="backup in backups" ng-class="{ 'uh-oh' : backup.ShouldBeFlagged}">
+                    <td>
+                        <i class="fa fa-fw fa-exclamation-triangle color-white" ng-show="backup.ShouldBeFlagged"></i>
+                        <i class="fa fa-fw fa-check color-green" ng-show="!backup.ShouldBeFlagged"></i>
+                    </td>
+                    <td>{{backup.InstanceName}}</td>
+                    <td ng-show="backup.Report != null">{{backup.Report.Success ? "Success" : "Failed"}}</td>
+                    <td ng-show="backup.Report == null">No backups</td>
+                    <td>{{backup.Report.EndDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td>{{backup.LastSuccessfulReport.EndDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td>{{backup.Report.Duration}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

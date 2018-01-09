@@ -12,3 +12,8 @@ D:\Projects\duplicati-central-station\Duplicati.CentralStation.Database\bin\Debu
 D:\Projects\duplicati-central-station\Duplicati.CentralStation.Database\bin\Debug\Duplicati.CentralStation.Database.pdb
 D:\Projects\duplicati-central-station\Duplicati.CentralStation.Database\obj\Debug\Duplicati.CentralStation.Database.dll
 D:\Projects\duplicati-central-station\Duplicati.CentralStation.Database\obj\Debug\Duplicati.CentralStation.Database.pdb
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Database\bin\Debug\Duplicati.CentralStation.Database.dacpac
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Database\bin\Debug\Duplicati.CentralStation.Database.dll
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Database\bin\Debug\Duplicati.CentralStation.Database.pdb
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Database\obj\Debug\Duplicati.CentralStation.Database.dll
+C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Database\obj\Debug\Duplicati.CentralStation.Database.pdb
