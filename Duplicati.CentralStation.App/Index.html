@@ -15,11 +15,43 @@
     <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin.css" rel="stylesheet">
+
+    <style>
+        .navbar-brand {
+            
+        }
+
+         .table tr.uh-oh {
+             background: #b01515;
+             color: white;
+         }
+
+        .color-green {
+            color: #5be15f;
+        }
+
+        .color-red {
+            color: red;
+        }
+
+        .color-white {
+            color: white;
+        }
+
+        .card-body-icon.text-gray {
+            color: #e3e0e0;
+        }
+
+        .card-body.card-error {
+            background: #dc3545;
+            color: white;
+        }
+    </style>
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top" ng-app="centralstation">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand" href="index.html">Duplicati Central Station</a>
+        <a class="navbar-brand" href="/">Duplicati Central Station</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -60,28 +92,28 @@
                     </a>
                 </li>
             </ul>
-            
+
         </div>
     </nav>
-<div class="content-wrapper" ng-controller="MainController">
-    <div class="container-fluid">
-        <ng-view></ng-view>
-    </div>
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
-    <footer class="sticky-footer">
-        <div class="container">
-            <div class="text-center">
-                <small>Copyright ©</small>
-            </div>
+    <div class="content-wrapper" ng-controller="MainController">
+        <div class="container-fluid">
+            <ng-view></ng-view>
         </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fa fa-angle-up"></i>
-    </a>
+        <!-- /.container-fluid-->
+        <!-- /.content-wrapper-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small></small>
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
 
-</div>
+    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -93,49 +125,58 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!--<script src="vendor/chart.js/Chart.min.js"></script>-->
+    <!--<script src="vendor/datatables/jquery.dataTables.js"></script>-->
+    <!--<script src="vendor/datatables/dataTables.bootstrap4.js"></script>-->
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
     <!--<script src="js/sb-admin-datatables.min.js"></script>-->
-    <script src="js/sb-admin-charts.min.js"></script>
+    <!--<script src="js/sb-admin-charts.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/1.1.1/angular-chart.js"></script>
 
     <script type="text/javascript">
-            angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+        angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
     </script>
 
     <script>
-        var centralstation = angular.module("centralstation", ["ngRoute"]).run(["$route", function ($route) {
+        var centralstation = angular.module("centralstation", ["ngRoute", "chart.js"]).run(["$route", function ($route) {
             $route.reload();
         }]);
-        centralstation.config(function ($routeProvider, $locationProvider) {
-            // configure html5 to get links working on jsfiddle
-            $locationProvider.html5Mode(false);
+        centralstation.config(function ($routeProvider, $locationProvider, ChartJsProvider) {
             $routeProvider
              .when('/', {
                  templateUrl: '/views/dashboard.html',
-                 controller: 'DashboardController',
-                 section: "dashboard"
+                 controller: 'DashboardController'
              })
             .when('/instances/add', {
                 templateUrl: '/views/instance_add.html',
-                controller: 'InstanceAddController',
-                section: "instanceadd"
+                controller: 'InstanceAddController'
             })
             .when('/instances', {
                 templateUrl: '/views/instance_list.html',
-                controller: 'InstanceListController',
-                section: "instancelist"
+                controller: 'InstanceListController'
             })
             .when('/instances/detailed/:id', {
                 templateUrl: '/views/instance_detailed.html',
-                controller: 'InstanceDetailedController',
-                section: "instancedetailed"
+                controller: 'InstanceDetailedController'
             });
 
 
+            $locationProvider.html5Mode(false);
+
+            // Configure all charts
+            ChartJsProvider.setOptions({
+                colors: ['#97BBCD', '#DCDCDC', '#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360']
+            });
+            // Configure all doughnut charts
+            ChartJsProvider.setOptions('doughnut', {
+                cutoutPercentage: 60
+            });
+            ChartJsProvider.setOptions('bubble', {
+                tooltips: { enabled: false }
+            });
         });
 
         centralstation.controller('MainController', function ($scope, $route, $routeParams, $location) {
@@ -184,9 +225,9 @@
             $scope.name = 'InstanceListController';
             $scope.params = $routeParams;
 
-            
 
-            $scope.delete = function(instance) {
+
+            $scope.delete = function (instance) {
                 $http.delete("/api/instances/" + instance.Id).then(function () {
                     load();
                 });
@@ -212,34 +253,64 @@
             function load() {
                 $http.get("/api/backups/" + $routeParams.id).then(function (response) {
                     $scope.instance = response.data;
+                    BuildFileGrowthGraph($scope.instance.PreviousReports)
                 });
             }
 
             load();
+
+
+            function BuildFileGrowthGraph(data) {
+                $scope.graph = {};
+                $scope.graph.labels = [];
+                $scope.graph.series = ['Size in KB'];
+                $scope.graph.data = [
+                  []
+                ];
+                $scope.graph.onClick = function (points, evt) {
+                    console.log(points, evt);
+                };
+                $scope.graph.onHover = function (points) {
+                    if (points.length > 0) {
+                        console.log('Point', points[0].value);
+                    } else {
+                        console.log('No point');
+                    }
+                };
+
+                $scope.graph.options = {
+                    scales: {
+                        yAxes: [
+                          {
+                              id: 'y-axis-1',
+                              type: 'linear',
+                              display: true,
+                              position: 'left'
+                          }
+                        ]
+                    },
+                    height: 100
+                };
+
+                for (var i = data.length - 1; i >= 0; i--) {
+                    $scope.graph.labels.push(formatDate(data[i].BeginDate));
+                    $scope.graph.data[0].push(data[i].SizeOfExaminedFiles);
+                }
+            }
+
+            function formatDate(string) {
+                var d = new Date(string);
+                return d.getFullYear() + "/" +
+                    ("00" + (d.getMonth() + 1)).slice(-2) + "/" +
+                        ("00" + d.getDate()).slice(-2) + " " +
+                        ("00" + d.getHours()).slice(-2) + ":" +
+                        ("00" + d.getMinutes()).slice(-2) + ":" +
+                        ("00" + d.getSeconds()).slice(-2);
+            }
+
         });
     </script>
 
-<style>
-    .table tr.uh-oh {
-        background: #b01515;
-        color: white;
-    }
-
-    .color-green {
-        color: #5be15f;
-    }
-
-    .color-red {
-        color: red;
-    }
-
-    .color-white {
-        color: white;
-    }
-
-    .card-body-icon.text-gray {
-        color:#e3e0e0;
-    }
-</style>
+    
 </body>
 </html>

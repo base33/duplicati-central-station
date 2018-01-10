@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using Newtonsoft.Json;
 
 namespace Duplicati.CentralStation.Api.Controllers
 {
@@ -27,26 +28,35 @@ namespace Duplicati.CentralStation.Api.Controllers
         /// <returns></returns>
         public async Task Post(int id, [FromBody]DuplicatiReport report)
         {
-            //save to disk
-            using (DuplicatiContext db = new DuplicatiContext())
+            try
             {
-                db.BackupReports.Add(new Data.Models.BackupReport
+                //save to disk
+                using (DuplicatiContext db = new DuplicatiContext())
                 {
-                    InstanceId = id,
-                    BeginDate = report.BeginTime,
-                    EndDate = report.EndTime,
-                    Message = "",
-                    Success = report.Success,
-                    AddedFiles = report.AddedFiles,
-                    SizeOfAddedFiles = report.SizeOfAddedFiles,
-                    ExaminedFiles = report.ExaminedFiles,
-                    SizeOfExaminedFiles = report.SizeOfExaminedFiles,
-                    DeletedFiles = report.DeletedFiles,
-                    NotProcessedFiles = report.NotProcessedFiles,
-                    Duration = report.Duration
-                });
-                await db.SaveChangesAsync();
+                    db.BackupReports.Add(new Data.Models.BackupReport
+                    {
+                        InstanceId = id,
+                        BeginDate = report.BeginTime,
+                        EndDate = report.EndTime,
+                        Message = "",
+                        Success = report.Success,
+                        AddedFiles = report.AddedFiles,
+                        SizeOfAddedFiles = report.SizeOfAddedFiles,
+                        ExaminedFiles = report.ExaminedFiles,
+                        SizeOfExaminedFiles = report.SizeOfExaminedFiles,
+                        DeletedFiles = report.DeletedFiles,
+                        NotProcessedFiles = report.NotProcessedFiles,
+                        Duration = report.Duration
+                    });
+                    await db.SaveChangesAsync();
+                }
             }
+            catch (Exception ex)
+            {
+                File.WriteAllText(HttpContext.Current.Server.MapPath("/app_data/report_errors.txt"), JsonConvert.SerializeObject(ex) + JsonConvert.SerializeObject(report));
+                throw ex;
+            }
+            
         }
     }
 }
