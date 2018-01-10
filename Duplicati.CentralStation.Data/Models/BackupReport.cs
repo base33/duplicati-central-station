@@ -26,6 +26,24 @@ namespace Duplicati.CentralStation.Data.Models
         public int DeletedFiles { get; set; }
         public long DurationTicks { get; set; }
 
+        public int ModifiedFiles { get; set; }
+        public int DeletedFolders { get; set; }
+        public int OpenedFiles { get; set; }
+        public int SizeOfModifiedFiles { get; set; }
+        public int SizeOfOpenedFiles { get; set; }
+        public int AddedFolders { get; set; }
+        public int TooLargeFiles { get; set; }
+        public int FilesWithError { get; set; }
+        public int ModifiedFolders { get; set; }
+        public int ModifiedSymlinks { get; set; }
+        public int AddedSymlinks { get; set; }
+        public bool PartialBackup { get; set; }
+        public bool DryRun { get; set; }
+        public bool VerboseOutput { get; set; }
+        public bool VerboseErrors { get; set; }
+        public string Warnings { get; set; }
+        public string Errors { get; set; }
+
         [NotMapped]
         public TimeSpan Duration
         {

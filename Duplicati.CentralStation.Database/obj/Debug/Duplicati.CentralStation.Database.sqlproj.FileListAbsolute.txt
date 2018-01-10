@@ -17,3 +17,7 @@ C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-
 C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Database\bin\Debug\Duplicati.CentralStation.Database.pdb
 C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Database\obj\Debug\Duplicati.CentralStation.Database.dll
 C:\Users\craig\OneDrive\Documents\Visual Studio 2015\Projects\duplicati-central-station\Duplicati.CentralStation.Database\obj\Debug\Duplicati.CentralStation.Database.pdb
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Database\obj\Debug\Model.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Database\obj\Debug\refactor.xml
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Database\obj\Debug\postdeploy.sql
+D:\Projects\duplicati-central-station\Duplicati.CentralStation.Database\obj\Debug\predeploy.sql

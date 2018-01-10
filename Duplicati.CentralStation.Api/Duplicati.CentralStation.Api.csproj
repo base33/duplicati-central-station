@@ -72,6 +72,7 @@
     <Compile Include="Models\Backup.cs" />
     <Compile Include="Models\BackupDetailed.cs" />
     <Compile Include="Models\DuplicatiReport.cs" />
+    <Compile Include="Models\DuplicatiReportRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
