@@ -3,7 +3,7 @@ obj/
 .vs/
 packages/
 
-*.dbml
+*.dbmdl
 *.suo
 *.user
 
