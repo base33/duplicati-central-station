@@ -49,6 +49,7 @@ namespace Duplicati.CentralStation.Api.Controllers
             {
                 return db.Instances
                     .OrderBy(i => i.Name)
+                    .ToList()
                     .Select(GetLastestBackupInfo)
                     .ToList()
                     .OrderByDescending(b => b.ShouldBeFlagged);
