@@ -55,6 +55,7 @@
                         <th>Started</th>
                         <th>End</th>
                         <th>Duration</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -67,6 +68,9 @@
                         <td>{{backup.BeginDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
                         <td>{{backup.EndDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
                         <td>{{backup.Duration}}</td>
+                        <td>
+                            <a href="#!/instances/detailed/{{$routeParams.id}}/backup/{{backup.Id}}" class="btn btn-info">View</a>
+                        </td>
                     </tr>
                     </tbody>
                 </table>

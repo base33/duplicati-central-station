@@ -125,6 +125,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\sb-admin.css" />
+    <Content Include="css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
     <Content Include="Scripts\app.js" />
@@ -153,6 +155,7 @@
     <Content Include="Scripts\vendor\jquery-easing\jquery.easing.min.js" />
     <Content Include="Scripts\vendor\jquery\jquery.js" />
     <Content Include="Scripts\vendor\jquery\jquery.min.js" />
+    <Content Include="Views\Instance_Detailed_Backup.html" />
     <Content Include="Views\Instance_Detailed.html" />
     <Content Include="Views\dashboard.html" />
     <Content Include="Views\Instance_List.html" />

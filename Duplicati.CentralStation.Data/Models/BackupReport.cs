@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Duplicati.CentralStation.Data.Models
 {
@@ -52,7 +53,8 @@ namespace Duplicati.CentralStation.Data.Models
         }
 
         public int InstanceId { get; set; }
-
+        
+        [JsonIgnore]
         public virtual Instance Instance { get; set; }
     }
 }

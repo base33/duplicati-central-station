@@ -1,0 +1,86 @@
+﻿body {
+    color: #777777;
+}
+
+a {
+    color: #65b1dd;
+}
+
+.btn.btn-info {
+    background: #7db7e2;
+    border-color: #7db7e2;
+}
+
+.btn.btn-danger {
+    background: #de7680;
+    border-color: #de7680;
+}
+
+.btn.btn-success {
+    background: #96cc85;
+    border-color: #96cc85;
+}
+
+#mainNav {
+    background: #ededed;
+}
+
+    #mainNav .navbar-brand {
+        color: #65b1dd;
+        font-family: 'Clear Sans', sans-serif;
+    }
+
+#mainNav .navbar-collapse .navbar-sidenav {
+    background: #fdfafa;
+}
+
+    .navbar-sidenav .nav-link.selected {
+        color: white;
+        background: #65b1dd;
+    }
+
+    #mainNav .navbar-collapse .navbar-sidenav > .nav-item > .nav-link, #mainNav .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a {
+        color: #65b7e2;
+    }
+
+    .sidenav-toggler i {
+        color: #59a4d0;
+    }
+
+    footer.sticky-footer {
+        background: #ededed;
+    }
+
+.table tr.uh-oh {
+    background: #de7680;
+    color: white;
+}
+
+.bg-green {
+    background: #96cc85;
+}
+
+.bg-red {
+    background: #de7680;
+}
+
+.color-green {
+    color: #96cc85;
+}
+
+.color-red {
+    color: #de7680;
+}
+
+.color-white {
+    color: white;
+}
+
+.card-body-icon.text-gray {
+    color: #e3e0e0;
+}
+
+.card-body.card-error {
+    background: #de7680;
+    color: white;
+}

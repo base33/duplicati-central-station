@@ -21,6 +21,10 @@ centralstation.config(function ($routeProvider, $locationProvider, ChartJsProvid
     .when('/instances/detailed/:id', {
         templateUrl: '/views/instance_detailed.html',
         controller: 'InstanceDetailedController'
+    })
+    .when('/instances/detailed/:id/backup/:reportid', {
+        templateUrl: '/views/instance_detailed_backup.html',
+        controller: 'InstanceDetailedBackupController'
     });
 
 
@@ -167,5 +171,19 @@ centralstation.controller('InstanceDetailedController', function ($scope, $route
                 ("00" + d.getMinutes()).slice(-2) + ":" +
                 ("00" + d.getSeconds()).slice(-2);
     }
+
+});
+
+centralstation.controller('InstanceDetailedBackupController', function ($scope, $routeParams, $http, $location) {
+    $scope.name = 'InstanceDetailedController';
+    $scope.params = $routeParams;
+
+    function load() {
+        $http.get("/api/backups/" + $routeParams.id + "/backup/" + $routeParams.reportid).then(function (response) {
+            $scope.backup = response.data;
+        });
+    }
+
+    load();
 
 });

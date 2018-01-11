@@ -32,11 +32,19 @@ namespace Duplicati.CentralStation.Api.Controllers
         }
 
         [HttpGet]
+        [Route("api/backups/{id}/backup/{backupId}")]
+        public BackupReport GetBackup(int id, int backupId)
+        {
+            using (DuplicatiContext db = new DuplicatiContext())
+            {
+                return db.BackupReports.FirstOrDefault(b => b.Id == backupId);
+            }
+        }
+
+        [HttpGet]
         [Route("api/backups/latest")]
         public IEnumerable<Backup> Latest()
         {
-            var backups = new List<Backup>();
-
             using (DuplicatiContext db = new DuplicatiContext())
             {
                 return db.Instances
