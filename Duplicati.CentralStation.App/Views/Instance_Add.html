@@ -1,4 +1,5 @@
 ﻿<form ng-submit="submit()" name="form">
+    <h5>Basic Information</h5>
     <div class="form-group" ng-class="{ 'has-danger': form.$submitted && form.name.$error.required}">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" name="name" ng-class="{ 'form-control-danger': form.$submitted && form.name.$error.required}" aria-describedby="name" placeholder="Please enter the instance name" ng-model="instance.Name" required>
@@ -6,6 +7,11 @@
     <div class="form-group">
         <label for="description">Url</label>
         <input type="text" class="form-control" id="url" name="url" ng-class="{ 'form-control-danger': form.$submitted && form.name.$error.required}" aria-describedby="url" placeholder="Please enter the instance Duplicati Url" ng-model="instance.Url" required>
+    </div>
+    <h5>Settings</h5>
+    <div class="form-group">
+        <label for="description">How often should a backup happen?</label>
+        <input type="number" class="form-control" id="hoursbetweenbackups" name="hoursbetweenbackups" ng-class="{ 'form-control-danger': form.$submitted && form.hoursbetweenbackups.$error.required}" aria-describedby="url" placeholder="Enter number of hours between backups" ng-model="instance.HoursBetweenBackups" required>
     </div>
 
     <button type="submit" class="btn btn-primary" ng-click="form.$submitted = true;">Create Instance</button>

@@ -8,23 +8,30 @@ centralstation.config(function ($routeProvider, $locationProvider, ChartJsProvid
     $routeProvider
      .when('/', {
          templateUrl: '/views/dashboard.html',
-         controller: 'DashboardController'
+         controller: 'DashboardController',
+         section: "backups"
      })
     .when('/instances/add', {
         templateUrl: '/views/instance_add.html',
-        controller: 'InstanceAddController'
+        controller: 'InstanceAddController',
+        section: "instances",
+        subsection: "add"
     })
     .when('/instances', {
         templateUrl: '/views/instance_list.html',
-        controller: 'InstanceListController'
+        controller: 'InstanceListController',
+        section: "instances",
+        subsection: "list"
     })
     .when('/instances/detailed/:id', {
         templateUrl: '/views/instance_detailed.html',
-        controller: 'InstanceDetailedController'
+        controller: 'InstanceDetailedController',
+        section: "backups"
     })
     .when('/instances/detailed/:id/backup/:reportid', {
         templateUrl: '/views/instance_detailed_backup.html',
-        controller: 'InstanceDetailedBackupController'
+        controller: 'InstanceDetailedBackupController',
+        section: "backups"
     });
 
 
@@ -73,6 +80,10 @@ centralstation.controller('DashboardController', function ($scope, $routeParams,
 centralstation.controller('InstanceAddController', function ($scope, $routeParams, $http, $location) {
     $scope.name = 'InstanceAddController';
     $scope.params = $routeParams;
+
+    $scope.instance = {
+        HoursBetweenBackups: 24
+    };
 
     $scope.submit = function () {
         if ($scope.saving)

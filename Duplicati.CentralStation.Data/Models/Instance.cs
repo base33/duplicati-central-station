@@ -24,6 +24,9 @@ namespace Duplicati.CentralStation.Data.Models
         [DataMember]
         public string Url { get; set; }
 
+        [DataMember]
+        public int HoursBetweenBackups { get; set; }
+
         public virtual ICollection<BackupReport> BackupReports { get; set; } 
     }
 }

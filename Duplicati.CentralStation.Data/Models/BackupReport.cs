@@ -56,5 +56,12 @@ namespace Duplicati.CentralStation.Data.Models
         
         [JsonIgnore]
         public virtual Instance Instance { get; set; }
+
+        public BackupReport()
+        {
+            Message = "";
+            Warnings = "";
+            Errors = "";
+        }
     }
 }

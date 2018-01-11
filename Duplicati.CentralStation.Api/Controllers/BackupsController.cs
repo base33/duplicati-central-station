@@ -79,7 +79,7 @@ namespace Duplicati.CentralStation.Api.Controllers
                 {
                     backup.LastSuccessfulReport = report;
 
-                    backup.ShouldBeFlagged = report.BeginDate < DateTime.Now.AddDays(-1);
+                    backup.ShouldBeFlagged = report.BeginDate < DateTime.Now.AddHours(instance.HoursBetweenBackups * -1);
                     backup.FlagReason = "No backup since for past " + Math.Ceiling((DateTime.Now - report.BeginDate).TotalHours) + " hours";
                 }
             }

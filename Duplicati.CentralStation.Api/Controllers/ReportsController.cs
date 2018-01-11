@@ -204,12 +204,12 @@ namespace Duplicati.CentralStation.Api.Controllers
                     report.VerboseErrors = value.ToLower() == "true";
                     break;
                 case "EndTime":
-                    report.EndDate = DateTime.Parse(value);
-                    //report.EndTime = DateTime.ParseExact(value, "M/d/yyyy HH:mm:ss tt", CultureInfo.InvariantCulture);
+                    //report.EndDate = DateTime.Parse(value);
+                    report.EndDate = DateTime.ParseExact(value, "M/d/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
                     break;
                 case "BeginTime":
-                    report.BeginDate = DateTime.Parse(value);
-                    //report.BeginTime = DateTime.ParseExact(value, "M/d/yyyy HH:mm:ss tt", CultureInfo.InvariantCulture);
+                    //report.BeginDate = DateTime.Parse(value);
+                    report.BeginDate = DateTime.ParseExact(value, "M/d/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
                     break;
                 case "Duration":
                     report.Duration = TimeSpan.Parse(value);

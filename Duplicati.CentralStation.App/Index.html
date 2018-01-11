@@ -17,17 +17,17 @@
     <link href="/css/sb-admin.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet" />
 </head>
-<body class="fixed-nav sticky-footer bg-dark" id="page-top" ng-app="centralstation">
+<body class="fixed-nav sticky-footer bg-dark" id="page-top" ng-app="centralstation" ng-controller="MainController" ng-cloak>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-        <a class="navbar-brand" href="/">Duplicati Central Station</a>
+        <a class="navbar-brand" href="/">Duplicati <span>Central Station</span> </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                    <a class="nav-link" href="/">
+                    <a class="nav-link" ng-class="{'selected': $route.current.$$route.section == 'backups'}" href="/">
                         <i class="fa fa-fw fa-database"></i>
                         <span class="nav-link-text">Backups</span>
                     </a>
@@ -39,13 +39,13 @@
                         <span class="nav-link-text">Manage Instances</span>
                     </a>
                     <ul class="sidenav-second-level collapse" id="collapseExamplePages">
-                        <li>
+                        <li ng-class="{'selected': $route.current.$$route.section == 'instances' && $route.current.$$route.subsection == 'list' }">
                             <a href="#!/instances">
                                 <i class="fa fa-fw fa-bars"></i>
                                 <span class="nav-link-text">List</span>
                             </a>
                         </li>
-                        <li>
+                        <li ng-class="{'selected': $route.current.$$route.section == 'instances' && $route.current.$$route.subsection == 'add' }">
                             <a class="nav-link" href="#!/instances/add">
                                 <i class="fa fa-fw fa-plus"></i>
                                 <span class="nav-link-text">Add</span>
@@ -64,7 +64,7 @@
 
         </div>
     </nav>
-    <div class="content-wrapper" ng-controller="MainController">
+    <div class="content-wrapper">
         <div class="container-fluid">
             <ng-view></ng-view>
         </div>

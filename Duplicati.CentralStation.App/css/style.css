@@ -30,11 +30,15 @@ a {
         font-family: 'Clear Sans', sans-serif;
     }
 
+    #mainNav .navbar-brand span {
+        color: #4e89a0;
+    }
+
 #mainNav .navbar-collapse .navbar-sidenav {
     background: #fdfafa;
 }
 
-    .navbar-sidenav .nav-link.selected {
+    #mainNav .navbar-collapse .navbar-sidenav > .nav-item > .nav-link.selected, #mainNav .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li.selected > a {
         color: white;
         background: #65b1dd;
     }
@@ -43,6 +47,9 @@ a {
         color: #65b7e2;
     }
 
+    .sidenav-toggler {
+        background: #ededed;
+    }
     .sidenav-toggler i {
         color: #59a4d0;
     }
