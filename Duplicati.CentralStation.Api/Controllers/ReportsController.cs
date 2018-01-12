@@ -45,7 +45,7 @@ namespace Duplicati.CentralStation.Api.Controllers
             
         }
 
-        public BackupReport ParseDuplicatiReportMessage(string message)
+        protected BackupReport ParseDuplicatiReportMessage(string message)
         {
             var decoded = HttpUtility.UrlDecode(message);
 
@@ -133,7 +133,7 @@ namespace Duplicati.CentralStation.Api.Controllers
             return report;
         }
 
-        public void SetValue(BackupReport report, string key, string value, bool append)
+        protected void SetValue(BackupReport report, string key, string value, bool append)
         {
             switch(key)
             {
