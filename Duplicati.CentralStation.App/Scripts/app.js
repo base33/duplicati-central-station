@@ -138,7 +138,7 @@ centralstation.controller('InstanceDetailedController', function ($scope, $route
     function BuildFileGrowthGraph(data) {
         $scope.graph = {};
         $scope.graph.labels = [];
-        $scope.graph.series = ['Size in KB'];
+        $scope.graph.series = ['Size in Bytes'];
         $scope.graph.data = [
           []
         ];

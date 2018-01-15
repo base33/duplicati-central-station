@@ -26,10 +26,12 @@ namespace Duplicati.CentralStation.Api.Controllers
         /// <returns></returns>
         public async Task Post(int id, [FromBody]DuplicatiReportRequest message)
         {
-            var report = ParseDuplicatiReportMessage(message.Message);
-            report.InstanceId = id;
+            BackupReport report = null;
             try
             {
+                report = ParseDuplicatiReportMessage(message.Message);
+                report.InstanceId = id;
+
                 //save to disk
                 using (DuplicatiContext db = new DuplicatiContext())
                 {
@@ -39,10 +41,12 @@ namespace Duplicati.CentralStation.Api.Controllers
             }
             catch (Exception ex)
             {
+                if(report == null)
+                    report = new BackupReport();
                 File.WriteAllText(HttpContext.Current.Server.MapPath("/app_data/report_errors.txt"), JsonConvert.SerializeObject(ex) + JsonConvert.SerializeObject(report));
                 throw ex;
             }
-            
+
         }
 
         protected BackupReport ParseDuplicatiReportMessage(string message)
@@ -135,7 +139,7 @@ namespace Duplicati.CentralStation.Api.Controllers
 
         protected void SetValue(BackupReport report, string key, string value, bool append)
         {
-            switch(key)
+            switch (key)
             {
                 case "DeletedFiles":
                     report.DeletedFiles = int.Parse(value);
@@ -162,7 +166,7 @@ namespace Duplicati.CentralStation.Api.Controllers
                     report.SizeOfAddedFiles = int.Parse(value);
                     break;
                 case "SizeOfExaminedFiles":
-                    report.SizeOfExaminedFiles = int.Parse(value);
+                    report.SizeOfExaminedFiles = long.Parse(value);
                     break;
                 case "SizeOfOpenedFiles":
                     report.SizeOfOpenedFiles = int.Parse(value);
