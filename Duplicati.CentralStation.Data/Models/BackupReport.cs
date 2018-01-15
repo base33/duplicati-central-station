@@ -20,9 +20,9 @@ namespace Duplicati.CentralStation.Data.Models
         public DateTime BeginDate { get; set; }
         public DateTime EndDate { get; set; }
         public int AddedFiles { get; set; }
-        public int SizeOfAddedFiles { get; set; }
+        public long SizeOfAddedFiles { get; set; }
         public int ExaminedFiles { get; set; }
-        public int SizeOfExaminedFiles { get; set; }
+        public long SizeOfExaminedFiles { get; set; }
         public int NotProcessedFiles { get; set; }
         public int DeletedFiles { get; set; }
         public long DurationTicks { get; set; }
@@ -30,8 +30,8 @@ namespace Duplicati.CentralStation.Data.Models
         public int ModifiedFiles { get; set; }
         public int DeletedFolders { get; set; }
         public int OpenedFiles { get; set; }
-        public int SizeOfModifiedFiles { get; set; }
-        public int SizeOfOpenedFiles { get; set; }
+        public long SizeOfModifiedFiles { get; set; }
+        public long SizeOfOpenedFiles { get; set; }
         public int AddedFolders { get; set; }
         public int TooLargeFiles { get; set; }
         public int FilesWithError { get; set; }
