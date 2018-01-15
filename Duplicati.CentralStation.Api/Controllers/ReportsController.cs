@@ -205,11 +205,11 @@ namespace Duplicati.CentralStation.Api.Controllers
                     break;
                 case "EndTime":
                     //report.EndDate = DateTime.Parse(value);
-                    report.EndDate = DateTime.ParseExact(value, "M/d/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
+                    report.EndDate = DateTime.ParseExact(value, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
                     break;
                 case "BeginTime":
                     //report.BeginDate = DateTime.Parse(value);
-                    report.BeginDate = DateTime.ParseExact(value, "M/d/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
+                    report.BeginDate = DateTime.ParseExact(value, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
                     break;
                 case "Duration":
                     report.Duration = TimeSpan.Parse(value);
