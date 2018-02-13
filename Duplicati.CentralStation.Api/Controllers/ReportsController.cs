@@ -29,12 +29,12 @@ namespace Duplicati.CentralStation.Api.Controllers
             BackupReport report = null;
             try
             {
-                report = ParseDuplicatiReportMessage(message.Message);
-                report.InstanceId = id;
-
                 //save to disk
                 using (DuplicatiContext db = new DuplicatiContext())
                 {
+                    var instance = db.Instances.FirstOrDefault(c => c.Id == id);
+                    report = ParseDuplicatiReportMessage(message.Message, instance);
+                    report.InstanceId = id;
                     db.BackupReports.Add(report);
                     await db.SaveChangesAsync();
                 }
@@ -49,13 +49,13 @@ namespace Duplicati.CentralStation.Api.Controllers
 
         }
 
-        protected BackupReport ParseDuplicatiReportMessage(string message)
+        protected BackupReport ParseDuplicatiReportMessage(string message, Instance instance)
         {
             var decoded = HttpUtility.UrlDecode(message);
 
             if (decoded.Contains("DeletedFiles"))
             {
-                return ProcessSuccessMessage(decoded);
+                return ProcessSuccessMessage(decoded, instance);
             }
 
             return ProcessFailureMessage(decoded);
@@ -97,7 +97,7 @@ namespace Duplicati.CentralStation.Api.Controllers
             };
         }
 
-        protected BackupReport ProcessSuccessMessage(string message)
+        protected BackupReport ProcessSuccessMessage(string message, Instance instance)
         {
             var lines = message.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).ToList();
             lines.RemoveRange(0, 2);
@@ -130,14 +130,14 @@ namespace Duplicati.CentralStation.Api.Controllers
                 else if (currentValue != "[]")
                 {
                     //its a key value (key: value)
-                    SetValue(report, currentKey, currentValue, insideSquareBrackets);
+                    SetValue(report, currentKey, currentValue, insideSquareBrackets, instance);
                 }
 
             }
             return report;
         }
 
-        protected void SetValue(BackupReport report, string key, string value, bool append)
+        protected void SetValue(BackupReport report, string key, string value, bool append, Instance instance)
         {
             switch (key)
             {
@@ -209,11 +209,11 @@ namespace Duplicati.CentralStation.Api.Controllers
                     break;
                 case "EndTime":
                     //report.EndDate = DateTime.Parse(value);
-                    report.EndDate = DateTime.ParseExact(value, "M/d/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
+                    report.EndDate = DateTime.ParseExact(value, !string.IsNullOrEmpty(instance.DateTimeFormat) ? instance.DateTimeFormat : "M/d/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
                     break;
                 case "BeginTime":
                     //report.BeginDate = DateTime.Parse(value);
-                    report.BeginDate = DateTime.ParseExact(value, "M/d/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
+                    report.BeginDate = DateTime.ParseExact(value, !string.IsNullOrEmpty(instance.DateTimeFormat) ? instance.DateTimeFormat : "M/d/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
                     break;
                 case "Duration":
                     report.Duration = TimeSpan.Parse(value);
